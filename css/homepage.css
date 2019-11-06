@@ -1,24 +1,4 @@
-header {
-    margin: 20px 50px 0 50px;
-    overflow: auto;
-}
-.logo {
-    /* display: inline-block; */
-    vertical-align: top;
-    float: left;
 
-    width: 200px;
-    height: 100px;
-    background-color: #bbb;
-}
-.nav {
-    /* display: inline-block; */
-    float: right;
-    margin-top: 20px;
-    width: 500px;
-    height: 50px;
-    background-color: #bbb;
-}
 .video {
     width: 1000px;
     height: 500px;
@@ -81,8 +61,15 @@ header {
 .photo_wall > .photo_container > .photo_container__right > img:hover{
     cursor: pointer;
 }
-.title-text {
+.title-text__big {
     position: absolute;
     top: 1200px;
     font-size: 280px;
+}
+.title-text__small {
+    position: absolute;
+    top: 2200px;
+    left: 50%;
+    font-size: 70px;
+    line-height: 90px;
 }

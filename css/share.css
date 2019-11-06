@@ -1,0 +1,21 @@
+.share-title {
+    padding: 0 50px;
+}
+.share-title > p {
+    font-size: 80px;
+}
+.list-card {
+    margin: 0 50px;
+    padding: 0 50px;
+    height: 1000px;
+
+    background-color: #bbb;
+}
+.list-card__text {
+    text-align: right;
+}
+.list-card__text > p {
+    display: inline-block;
+    font-size: 100px;
+    text-align: left;
+}
