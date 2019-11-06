@@ -1,0 +1,88 @@
+header {
+    margin: 20px 50px 0 50px;
+    overflow: auto;
+}
+.logo {
+    /* display: inline-block; */
+    vertical-align: top;
+    float: left;
+
+    width: 200px;
+    height: 100px;
+    background-color: #bbb;
+}
+.nav {
+    /* display: inline-block; */
+    float: right;
+    margin-top: 20px;
+    width: 500px;
+    height: 50px;
+    background-color: #bbb;
+}
+.video {
+    width: 1000px;
+    height: 500px;
+    margin: 50px auto;
+
+    background-color: #bbb;
+}
+.photo_wall {
+    width: 100%;
+    height: 3000px;
+
+    margin: 100px 0 0 0;
+
+    background-color: #bbb;
+}
+.photo_wall > .photo_container {
+    width: 800px;
+    height: 3000px;
+    margin: 0 auto;
+    overflow: auto;
+    position: relative;
+}
+.photo_wall > .photo_container > .photo_container__left {
+    width: 398px;
+    height: 1000px;
+    top: 50px;
+    left: 0;
+    position: absolute;
+}
+.photo_wall > .photo_container > .photo_container__left > img {
+    height: 350px;
+    width: 250px;
+
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 200px;
+
+    background-color: #b33a3a;
+}
+.photo_wall > .photo_container > .photo_container__left > img:hover{
+    cursor: pointer;
+}
+.photo_wall > .photo_container > .photo_container__right {
+    width: 396px;
+    height: 1000px;
+    margin-top: 50px;
+    margin-left: 398px;
+    float: left;
+}
+.photo_wall > .photo_container > .photo_container__right > img {
+    height: 350px;
+    width: 250px;
+
+    display: block;
+    margin: 200px auto 50px auto;
+
+    background-color: #b33a3a;
+}
+.photo_wall > .photo_container > .photo_container__right > img:hover{
+    cursor: pointer;
+}
+.title-text {
+    position: absolute;
+    top: 1200px;
+    font-size: 280px;
+}
