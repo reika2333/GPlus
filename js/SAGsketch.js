@@ -14,13 +14,13 @@ let bgSketch = function(p) {
     }
     p.initc = function() {
         for(var i=0;i<22;i++){
-            c[i] = p.random(-5,5);
+            c[i] = p.random(-5,0);
         }
     }
     p.draw = function() {
         p.test.setUniform("iResolution", [1440,1670]);//pass some values to the shader
-        p.test.setUniform("iTime", p.millis()*.001);
-        p.test.setUniform('iMouse',[p.mouseX,p.mouseY]);
+        // p.test.setUniform("iTime", p.millis()*.001);
+        // p.test.setUniform('iMouse',[p.mouseX,p.mouseY]);
         p.test.setUniform("noctaves",noctaves);
         p.test.setUniform("c",c);
         p.shader(p.test);
