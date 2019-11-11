@@ -2,57 +2,140 @@
 <html>
     <head>
         <title>G+ | homepage</title>
+        <link rel="stylesheet" href="../source/bootstrap.min.css">
         <link rel="stylesheet" href="../css/normal.css">
         <link rel="stylesheet" href="../css/homepage.css">
+        <script src="https://cdn.bootcss.com/jquery/3.0.0-rc1/jquery.min.js"></script>
+        <script src="../source/bootstrap.min.js"></script>
     </head>
 <body>
     <header>
-        <div class="logo">
-            logo
+        <div class="header__logo">
+            <img src="../img/logo.png" alt="">
         </div>
         <nav class="nav">
-            nav
+            <span onclick="javascript: toPage('homepage')">Home</span>
+            <span onclick="javascript: toPage('SheAndGames')">SheAndGames</span>
+            <span onclick="javascript: toPage('Insights')">Insights</span>
+            <span>G+Talk</span>
+            <span>Improvement</span>
         </nav>
     </header>
     <section>
         <div class="video">
-            video
+            <video class="video-content">
+                <source src="../img/video/效果2.mov">
+            </video>
+            <button class="play-btn" id="play"></button>
+        </div>
+    </section>
+    <section>
+        <div class="logo-text">
+            <img src="../img/logo.png" alt="">
+        </div>
+        <div class="title-text__vertical">
+            AWARD
+        </div>
+        <div class="title-text__small">
+            <h4>10</h4>
+            Successful <br>
+            Female <br>
+            Worker
         </div>
     </section>
     <section>
         <div class="photo_wall">
             <div class="photo_container">
-                <div class="photo_container__left">
-                    <img onclick="javascrtpt:toDetail()">
-                    <img onclick="javascrtpt:toDetail()">
-                    <img onclick="javascrtpt:toDetail()">
-                    <img onclick="javascrtpt:toDetail()">
-                    <img onclick="javascrtpt:toDetail()">
-                </div>
-                <div class="photo_container__right">
-                        <img onclick="javascrtpt:toDetail()">
-                        <img onclick="javascrtpt:toDetail()">
-                        <img onclick="javascrtpt:toDetail()">
-                        <img onclick="javascrtpt:toDetail()">
-                        <img onclick="javascrtpt:toDetail()">
+                <a class="f-left" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <!-- <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> -->
+                    <img src="../img/arrow-left.png">
+                    <span class="sr-only">Previous</span>
+                </a>
+                <div style="display: inline-block;width: 80%;">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div style="text-align: center;">
+                                    <img class="item__img" onclick="javascript: toDetail(1)" src="../img/gamebox/p1.png">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div style="text-align: center;">
+                                    <img class="item__img" onclick="javascript: toDetail(2)" src="../img/gamebox/p2.png">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div style="text-align: center;">
+                                    <img class="item__img" onclick="javascript: toDetail(3)" src="../img/gamebox/p3.png">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div style="text-align: center;">
+                                    <img class="item__img" onclick="javascript: toDetail(4)" src="../img/gamebox/p4.png">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div style="text-align: center;">
+                                    <img class="item__img" onclick="javascript: toDetail(5)" src="../img/gamebox/p5.png">
+                                </div>
+                            </div>
+                             <div class="item">
+                                <div style="text-align: center;">
+                                    <img class="item__img" onclick="javascript: toDetail(6)" src="../img/gamebox/p6.png">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div style="text-align: center;">
+                                    <img class="item__img" onclick="javascript: toDetail(7)" src="../img/gamebox/p7.png">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div style="text-align: center;">
+                                    <img class="item__img" onclick="javascript: toDetail(8)" src="../img/gamebox/p8.png">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div style="text-align: center;">
+                                    <img class="item__img" onclick="javascript: toDetail(9)" src="../img/gamebox/p9.png">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div style="text-align: center;">
+                                    <img class="item__img" onclick="javascript: toDetail(10)" src="../img/gamebox/p10.png">
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <!-- Controls -->
+                <a class="f-right" href="#carousel-example-generic" role="button" data-slide="next">
+                    <img src="../img/arrow-right.png">
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </div>
         <div class="title-text__big">
-            2019 <br>
-            G+AWARD
+            <span>2019</span> <br>
+            AWARD
         </div>
-        <div class="title-text__small">
-                10 <br>
-                successful <br>
-                female <br>
-                worker
-            </div>
     </section>
 
     <script>
-        function toDetail() {
-            window.location.href = './detail.html'
+        let video = document.querySelector("video")
+        let playBtn = document.querySelector('#play')
+        playBtn.onclick = function() {
+            if(video.paused){
+                video.play();
+            }else{
+                video.pause();
+            }
+        }
+        function toDetail(id) {
+            window.location.href = './detail.html?id=' + id
+        }
+        function toPage(pageName) {
+            window.location.href = `./${pageName}.html`
         }
     </script>
 </body>

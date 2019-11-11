@@ -1,28 +1,52 @@
+@font-face {
+    font-family: Neuropol;
+    src: url(../font/neuropol.ttf);
+}
+@font-face {
+    font-family: CAMEO;
+    src: url(../font/CAMEO.TTF);
+}
 *{
     margin: 0;
     padding: 0;
+    box-sizing: content-box;
+    color: black;
 }
 html,body {
     margin: 0;
+    padding: 0;
 }
 header {
-    margin: 20px 50px 0 50px;
+    margin: 20px 0px 0 0px;
     overflow: auto;
 }
-.logo {
+header > .header__logo {
     /* display: inline-block; */
-    vertical-align: top;
+    vertical-align: middle;
     float: left;
+    padding: 100px 0 0 130px;
 
-    width: 200px;
-    height: 100px;
-    background-color: #bbb;
+    width: 225px;
+    /* height: 100px; */
+}
+header > .header__logo > img {
+    width: 100%;
+    height: auto;
 }
 .nav {
     /* display: inline-block; */
     float: right;
-    margin-top: 20px;
-    width: 500px;
-    height: 50px;
-    background-color: #bbb;
+    margin-top: 150px;
+    width: 750px;
+    height: 100px;
+    padding-right: 80px;
+    /* background-color: #bbb; */
+}
+.nav > span {
+    font-family: Neuropol;
+    font-size: 19px;
+    line-height: 30px;
+    padding: 10px;
+
+    cursor: pointer;
 }

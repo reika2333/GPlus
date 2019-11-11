@@ -1,3 +1,37 @@
+
+.header__title {
+    font-family: Neuropol;
+    font-size: 75px;
+    float: left;
+    letter-spacing: 12px;
+    position: absolute;
+    transform: rotate(90deg);
+    top: 450px;
+    left: -380px;
+    font: thin;
+}
+.header__text {
+    font-family: Neuropol;
+    font-size: 78px;
+    line-height: 95px;
+    float: left;
+    letter-spacing: 10px;
+    margin-left: 145px;
+}
+.nav {
+    width: 730px;
+    margin-top: 100px;
+}
+.logo {
+    float: right;
+    width: 350px;
+    padding-right: 110px;
+    margin-top: 80px;
+}
+.logo > img {
+    width: 100%;
+    height: auto;
+}
 .list-card {
     margin: 40px 50px;
     padding: 40px 50px;
