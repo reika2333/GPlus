@@ -1,4 +1,3 @@
-
 body{
     background-image: url(../img/homepage_bg.jpg);
     background-size: 100% auto;
@@ -79,16 +78,6 @@ body{
     cursor: pointer;
 }
 .title-text__big {
-    position: absolute;
-    top: 1200px;
-    font-size: 280px;
-}
-.title-text__small {
-    position: absolute;
-    top: 2200px;
-    left: 50%;
-    font-size: 70px;
-    line-height: 90px;
     margin-top: 172px;
     padding-bottom: 293px;
     padding-left: 87px;
