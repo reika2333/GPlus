@@ -37,6 +37,7 @@
         </div>
     </header>
     <section class="list-card">
+<<<<<<< HEAD
         <div class="list">
             <div class="list_el">
                 <div class="info-card">
@@ -147,6 +148,104 @@
         function toDetail() {
             window.location.href = './detail.html'
         }
+=======
+        <div style="margin-left: 425px;">
+            <div class="chart-title">comparing male and female game enthusiast</div>
+            <div id="chart1" style="width: 500px; height: 300px;"></div>
+            <div class="x-axis-text">
+                the conventional player <br>
+                the backseat viewer <br>
+                the all-round enthusiast <br>
+                the hardware enthusiast <br>
+                the ultimate gamer <br>
+                the popcorn gamer <br>
+                the cloud gamer <br>
+                the time filler
+            </div>
+            <div id="chart2" style="width: 500px; height: 300px;margin-top: 70px;"></div>
+        </div>
+    </section>
+
+    <script src="../source/echarts.min.js"></script>
+    <script>
+        let myChart1 = echarts.init(document.getElementById('chart1'));
+        let myChart2 = echarts.init(document.getElementById('chart2'));
+
+        let option1 = {
+            color: ['#cd07fe'],
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            grid: {
+                containLabel: false
+            },
+            xAxis: [
+                {
+                    type : 'category',
+                    axisTick: {
+                        alignWithLabel: false
+                    },
+                    axisLine: false,
+                    splitLine: {
+                        show: false
+                    }
+                }
+            ],
+            yAxis: {
+                type : 'value',
+                axisLine: false,
+                splitLine: {
+                    show: false
+                }
+            },
+            series: {
+                type:'bar',
+                barWidth: '38px',
+                data:[36, 17, 14, 9, 8, 7, 6, 3],
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'top',
+                        formatter: '{c}%',
+                        textStyle: {
+                            color: '#cd07fe'
+                        }
+                    }
+                }
+            }
+        };
+        let option2 = {
+            ...option1,
+            yAxis: {
+                inverse: true,
+                type : 'value',
+                axisLine: false,
+                splitLine: {
+                    show: false
+                }
+            },
+            series : {
+                type:'bar',
+                barWidth: '38px',
+                data:[21, 19, 15, 13, 11, 10, 6, 5],
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'bottom',
+                        formatter: '{c}%',
+                        textStyle: {
+                            color: '#cd07fe'
+                        }
+                    }
+                }
+            }
+        }
+        myChart1.setOption(option1);
+        myChart2.setOption(option2);
+>>>>>>> show
     </script>
     <script src="../js/util.js"></script>
 </body>
