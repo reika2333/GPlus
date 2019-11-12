@@ -89,9 +89,6 @@
     font-size: 34px;
     letter-spacing: 4px;
     cursor: pointer;
-<<<<<<< HEAD
-    word-spacing: 6px;
-=======
 }
 .x-axis-text {
     position: absolute;
@@ -109,5 +106,4 @@
     transform: rotate(90deg);
     top: 310px;
     left: 320px
->>>>>>> show
 }
