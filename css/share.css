@@ -17,6 +17,7 @@
     float: left;
     letter-spacing: 10px;
     margin-left: 145px;
+    font-weight: normal;
 }
 .nav {
     width: 730px;
@@ -75,11 +76,6 @@
     letter-spacing: 4px;
     cursor: pointer;
 }
-.video-section {
-    position: absolute;
-    width: 100%;
-    top: 1380px;
-}
 .video {
     width: 940px;
     height: 600px;
@@ -101,6 +97,11 @@
 /*
 ---------insight--------
 */
+.video-section {
+    position: absolute;
+    width: 100%;
+    top: 1580px;
+}
 .x-axis-text {
     position: absolute;
     transform: rotate(90deg);

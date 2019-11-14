@@ -80,21 +80,24 @@ body{
 .title-text__big {
     margin-top: 172px;
     padding-bottom: 293px;
-    padding-left: 87px;
-    font-size: 160px;
+    padding-left: 80px;
+    font-size: 180px;
+    letter-spacing: 12px;
     line-height: 168px;
     font-family: CAMEO;
 }
 .title-text__big > span {
     font-family: Neuropol;
-    font-size: 125px;
+    font-size: 140px;
+    letter-spacing: 16px;
 }
 .title-text__small {
     position: absolute;
     top: 1720px;
     left: 1099px;
-    font-size: 25px;
-    line-height: 45px;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 4px;
     font-family: Neuropol;
 }
 .title-text__small > h4 {
@@ -103,10 +106,11 @@ body{
 }
 .title-text__vertical {
     position: absolute;
-    top: 1805px;
-    left: 968px;
+    top: 1830px;
+    left: 955px;
     font-size: 40px;
     line-height: 45px;
+    letter-spacing: 8px;
     font-family: Neuropol;
 
     transform: rotate(90deg);

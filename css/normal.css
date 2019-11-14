@@ -47,7 +47,8 @@ header > .header__logo > img {
 }
 .nav > span {
     font-family: Neuropol;
-    font-size: 19px;
+    letter-spacing: 2px;
+    font-size: 17px;
     line-height: 30px;
     padding: 10px;
 
