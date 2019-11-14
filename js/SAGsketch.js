@@ -6,7 +6,7 @@ let bgSketch = function(p) {
         p.createCanvas(p.windowWidth, 2650, p.WEBGL);
         gl=this.canvas.getContext('webgl'); 
         gl.disable(gl.DEPTH_TEST);
-        noctaves=1;
+        noctaves=3;
         c=[];
         p.initc();
         p.test=new p5.Shader(this._renderer,vert,frag);//shaders are loaded
@@ -14,12 +14,12 @@ let bgSketch = function(p) {
     }
     p.initc = function() {
         for(var i=0;i<22;i++){
-            c[i] = p.random(-5,0);
+            c[i] = p.random(-5,5);
         }
     }
     p.draw = function() {
         p.test.setUniform("iResolution", [p.width,2650]);//pass some values to the shader
-        // p.test.setUniform("iTime", p.millis()*.001);
+        p.test.setUniform("iTime", p.millis()*.001);
         // p.test.setUniform('iMouse',[p.mouseX,p.mouseY]);
         p.test.setUniform("noctaves",noctaves);
         p.test.setUniform("c",c);
