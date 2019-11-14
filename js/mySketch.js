@@ -21,14 +21,20 @@ let bgSketch = function(p) {
 
     let rowsPerFrame = 2;
 
+    function getQuery(name) {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);//search,查询？后面的参数，并匹配正则
+        if(r!=null)return  unescape(r[2]); return null;
+    }
+
     p.setup = function() {
         p.createCanvas(p.windowWidth, 1670);
 	    [WW, WH] = [p.windowWidth, 1670];
 	    p.newGfx();	
     }
     p.preload = function() {
-        [0,1,2].forEach(i => {
-            let fn = `../img/${i}.png`;
+        [0].forEach(i => {
+            let fn = `../img/bg/${getQuery('id')}.jpg`;
             images[i] = p.loadImage(fn, function(_img){
                 _img.loadPixels();
             });

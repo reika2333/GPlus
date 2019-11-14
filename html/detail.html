@@ -14,17 +14,30 @@
                 <div class="info-card__head">
                     <span class="close" onclick="javascript: closeCard()">—</span>
                 </div>
+                <div class="info-card__body">
+                    <img id="info-img">
+                </div>
             </div>
         </div>
 
         <script>
+            let img = document.querySelector('#info-img')
+            img.src = `../img/info/${getQuery('id')}.jpg`
+
             function showCard() {
                 let card = document.getElementById('info-card')
                 card.style.visibility = 'visible'
             }
+
             function closeCard() {
                 let card = document.getElementById('info-card')
                 card.style.visibility = 'hidden'
+            }
+            
+            function getQuery(name) {
+                var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+                var r = window.location.search.substr(1).match(reg);
+                if(r!=null)return  unescape(r[2]); return null;
             }
         </script>
 </body>

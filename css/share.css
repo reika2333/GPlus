@@ -76,24 +76,6 @@
     word-spacing: 6px;
     cursor: pointer;
 }
-.x-axis-text {
-    position: absolute;
-    transform: rotate(90deg);
-    font-family: Arial-black;
-    font-size: 13px;
-    line-height: 50px;
-    width: 180px;
-    margin: 0;
-    top: 180px;
-    left: 635px
-}
-.chart-title {
-    position: absolute;
-    transform: rotate(90deg);
-    top: 310px;
-    left: 320px;
-    font-family: Arial-bold;
-}
 .video-section {
     position: absolute;
     width: 100%;
@@ -116,6 +98,39 @@
     margin: 14px 0 0 148px;
     border-radius: 8px;
     background-color: black;
+}
+/*
+---------insight--------
+*/
+.x-axis-text {
+    position: absolute;
+    transform: rotate(90deg);
+    font-family: Arial-black;
+    font-size: 13px;
+    line-height: 50px;
+    width: 180px;
+    margin: 0;
+    top: 180px;
+    left: 635px
+}
+.female,.male {
+    position: absolute;
+    font-family: Arial;
+    font-style: italic;
+    font-size: 20px;
+    top: 206px;
+    left: 880px;
+}
+.male {
+    top: 546px;
+    left: 880px;
+}
+.chart-title {
+    position: absolute;
+    transform: rotate(90deg);
+    top: 310px;
+    left: 320px;
+    font-family: Arial-bold;
 }
 .play-btn-left {
     width: 66px;
@@ -154,9 +169,83 @@
 }
 #question > span {
     text-decoration: underline;
-    /* color: ; */
+    color: #ba70f2;
     font-family: Neuropol;
     font-size: 22px;
     letter-spacing: 3px;
     font: thin;
+}
+/*
+--------GTalk--------
+*/
+.talk-section {
+    position: absolute;
+    width: 100%;
+    top: 1830px;
+}
+.talk-container {
+    width: 645px;
+    margin: 0 auto;
+    height: 500px;
+
+    /* background-color: #ccc; */
+}
+.list-item {
+    width: 100%;
+    margin-bottom: 30px;
+    border-bottom: solid 2px black;
+}
+.list-item__question {
+    width: 100%;
+    font-family: Neuropol;
+    font-size: 16px;
+    padding: 8px 6px;
+    letter-spacing: 2px;
+}
+.list-item__anser {
+    width: 100%;
+    font-size: 16px;
+    padding: 8px 6px;
+}
+.list-item__icon {
+    width: 260px;
+    padding: 18px 8px;
+}
+.talk-input {
+    width: 100%;
+    position: absolute;
+    top: 860px;
+}
+.talk-input-container {
+    width: 517px;
+    height: 870px;
+    margin: 0 auto;
+    background-image: url(../img/input-bg.png);
+    background-repeat: no-repeat;
+}
+.input {
+    width: 278px;
+    height: 236px;
+    margin: 114px 0 0 124px;
+    border: none;
+    background-color: rgba(255,255,255,0);
+    font-size: 21px;
+    line-height: 32px;
+    font-family: Neuropol;
+}
+.input:focus {
+    outline: none;
+}
+.input::placeholder {
+    color: #666;
+}
+.talk-cancel {
+    width: 72px;
+    height: 72px;
+    border-radius: 36px;
+    position: relative;
+    top: 245px;
+    left: 13px;
+    opacity: 0;
+    cursor: pointer;
 }

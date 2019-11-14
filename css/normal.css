@@ -16,6 +16,9 @@ html,body {
     margin: 0;
     padding: 0;
 }
+::-webkit-scrollbar{
+    display:none
+}
 header {
     margin: 20px 0px 0 0px;
     overflow: auto;
