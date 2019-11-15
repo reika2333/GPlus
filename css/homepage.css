@@ -1,7 +1,13 @@
-body{
+/* body{
     background-image: url(../img/homepage_bg.jpg);
     background-size: 100% auto;
     background-repeat: no-repeat;
+} */
+.body-container {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    /* left: 0; */
 }
 .video {
     width: 1300px;

@@ -3,7 +3,7 @@ let bgSketch = function(p) {
 
     p.setup = function() {
         let el = document.querySelector('#bgElem')
-        p.createCanvas(p.windowWidth, 2800, p.WEBGL);
+        p.createCanvas(p.windowWidth, 3720, p.WEBGL);
         gl=this.canvas.getContext('webgl'); 
         gl.disable(gl.DEPTH_TEST);
         noctaves=3;
@@ -18,13 +18,13 @@ let bgSketch = function(p) {
         }
     }
     p.draw = function() {
-        p.test.setUniform("iResolution", [p.width,2800]);//pass some values to the shader
+        p.test.setUniform("iResolution", [p.width,3720]);//pass some values to the shader
         p.test.setUniform("iTime", p.millis()*.001);
         // p.test.setUniform('iMouse',[p.mouseX,p.mouseY]);
         p.test.setUniform("noctaves",noctaves);
         p.test.setUniform("c",c);
         p.shader(p.test);
-        p.box(2800);
+        p.box(3720);
     }
     // p.mouseReleased = function() {
     //     noctaves = (noctaves==5) ? 4 : noctaves + 1;

@@ -165,7 +165,7 @@
     line-height: 35px;
     font-size: 25px;
     font-family: Arial;
-    margin-top: 76px;
+    margin-top: 120px;
 }
 #question > span {
     text-decoration: underline;
@@ -186,7 +186,7 @@
 .talk-container {
     width: 645px;
     margin: 0 auto;
-    height: 500px;
+    /* height: 500px; */
 
     /* background-color: #ccc; */
 }
@@ -248,4 +248,12 @@
     left: 13px;
     opacity: 0;
     cursor: pointer;
+}
+.list-load-more {
+    text-align: center;
+    font-family: Neuropol;
+    font-size: 34px;
+    letter-spacing: 4px;
+    cursor: pointer;
+    padding: 25px 0 150px 0;
 }

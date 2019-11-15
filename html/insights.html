@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>G+ | homepage</title>
+        <title>G+ | Insight</title>
         <link rel="stylesheet" href="../css/normal.css">
         <link rel="stylesheet" href="../css/share.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js" type="text/javascript"></script>
@@ -161,15 +161,18 @@
         let textContent = [
             {
                 title: 'NEWZOO',
-                question: `Why Aren't There More Women In The Gaming Industry?`
+                question: `Why Aren't There More Women In The Gaming Industry?`,
+                style: 'margin-top: 120px'
             },
             {
                 title: 'IGDA',
-                question: `Newzoo and Gamma Data Report: Female Mobile Gamers in Japan Play More Per Week than Men.`
+                question: `Newzoo and Gamma Data Report: Female Mobile Gamers in Japan Play More Per Week than Men.`,
+                style: 'margin-top: 100px'
             },
             {
                 title: 'NEWZOO',
-                question: `Women Account for 46% of All Game Enthusiasts: Watching Game Video Content and Esports Has Changed How Women and Men Alike Engage with Games`
+                question: `Women Account for 46% of All Game Enthusiasts: Watching Game Video Content and Esports Has Changed How Women and Men Alike Engage with Games`,
+                style: 'margin-top: 70px'
             }
         ]
         function changeText(index) {
@@ -177,6 +180,7 @@
             document.querySelector('#question').innerHTML = 
             `${textContent[index].question} <br>
             <span>read more</span>`;
+            textContent[index].style ? (document.querySelector('#question').style = textContent[index].style) : ''
         }
         function toNext(num) {
             textIndex += num
