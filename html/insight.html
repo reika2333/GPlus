@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>G+ | Insight</title>
+        <link rel="stylesheet" href="../css/normal.css">
+        <link rel="stylesheet" href="../css/share.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js" type="text/javascript"></script>
+    </head>
+<body>
+    <div id="bgElem" height="1670"></div>
+    <script src="../js/shaders.js" type="text/javascript"></script>
+    <script src="../js/SAGsketch.js" type="text/javascript"></script>
+    <div class="header__title" style="top:230px;left: -180px;font-size: 80px;">
+        Insights
+    </div>
+    <header style="position: absolute; top: 0;width: 100%;">
+        <div class="header__text" style="font-size: 60px;letter-spacing: 6px;line-height: 68px;margin-left: 120px;">
+                Focus on <br>
+                the
+        </div>
+        <nav class="nav" style="width: 745px; padding-right:90px;">
+            <span onclick="javascript: toPage('homepage')">Home</span>
+            <span onclick="javascript: toPage('SheAndGames')">SheAndGames</span>
+            <span onclick="javascript: toPage('Insights')">Insights</span>
+            <span onclick="javascript: toPage('gTalk')">G+Talk</span>
+            <span>Improvement</span>
+        </nav>
+        <div class="header__text" style="font-size: 60px;letter-spacing: 8px;line-height: 68px;margin-top: 0px;margin-left: 120px;">
+                latest <br>
+                industry<br>
+                news<br>
+                about<br>
+                women <br>
+                and <br>
+                video <br>
+                games
+        </div>
+        <div class="logo">
+            <img src="../img/logo.png">
+        </div>
+    </header>
+
+    <section class="list-card" style="top: 800px">
+        <div style="margin-left: 425px;">
+            <!-- <div class="chart-title">comparing male and female game enthusiast</div> -->
+            <div id="chart1" style="width: 500px; height: 300px;"></div>
+            <div class="x-axis-text">
+                the conventional player <br>
+                the backseat viewer <br>
+                the all-round enthusiast <br>
+                the hardware enthusiast <br>
+                the ultimate gamer <br>
+                the popcorn gamer <br>
+                the cloud gamer <br>
+                the time filler
+            </div>
+            <div class="female">FEMALE</div>
+            <div class="male">MALE</div>
+            <div id="chart2" style="width: 500px; height: 300px;margin-top: 70px;"></div>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <div class="video">
+            <div style="float: left;width: 150px;height: 410px;">
+                <button class="play-btn-left" id="play_pre" onclick="javascript: toNext(-1)"></button>
+            </div>
+            <div id="title">NEWZOO</div>
+            <div id="question">
+                Why Aren't There More Women In The Gaming Industry? <br>
+                <span>read more</span>
+            </div>
+            <div style="float: left;width: 200px;height: 410px;">
+                <button class="play-btn-right" id="play_after" onclick="javascript: toNext(1)"></button>
+            </div>
+        </div>
+    </section>
+    
+    <script src="../source/echarts.min.js"></script>
+    <script>
+        let myChart1 = echarts.init(document.getElementById('chart1'));
+        let myChart2 = echarts.init(document.getElementById('chart2'));
+
+        let option1 = {
+            color: ['#cd07fe'],
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            grid: {
+                containLabel: false
+            },
+            xAxis: [
+                {
+                    type : 'category',
+                    axisTick: {
+                        alignWithLabel: false
+                    },
+                    axisLine: false,
+                    splitLine: {
+                        show: false
+                    }
+                }
+            ],
+            yAxis: {
+                type : 'value',
+                axisLine: false,
+                splitLine: {
+                    show: false
+                }
+            },
+            series: {
+                type:'bar',
+                barWidth: '38px',
+                data:[36, 17, 14, 9, 8, 7, 6, 3],
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'top',
+                        formatter: '{c}%',
+                        textStyle: {
+                            color: '#cd07fe'
+                        }
+                    }
+                }
+            }
+        };
+        let option2 = {
+            ...option1,
+            yAxis: {
+                inverse: true,
+                type : 'value',
+                axisLine: false,
+                splitLine: {
+                    show: false
+                }
+            },
+            series : {
+                type:'bar',
+                barWidth: '38px',
+                data:[21, 19, 15, 13, 11, 10, 6, 5],
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'bottom',
+                        formatter: '{c}%',
+                        textStyle: {
+                            color: '#cd07fe'
+                        }
+                    }
+                }
+            }
+        }
+        myChart1.setOption(option1);
+        myChart2.setOption(option2);
+
+        // 文字切换
+        let textIndex = 0;
+        let textContent = [
+            {
+                title: 'NEWZOO',
+                question: `Why Aren't There More Women In The Gaming Industry?`,
+                style: 'margin-top: 120px'
+            },
+            {
+                title: 'IGDA',
+                question: `Newzoo and Gamma Data Report: Female Mobile Gamers in Japan Play More Per Week than Men.`,
+                style: 'margin-top: 100px'
+            },
+            {
+                title: 'NEWZOO',
+                question: `Women Account for 46% of All Game Enthusiasts: Watching Game Video Content and Esports Has Changed How Women and Men Alike Engage with Games`,
+                style: 'margin-top: 70px'
+            }
+        ]
+        function changeText(index) {
+            document.querySelector('#title').innerHTML = textContent[index].title;
+            document.querySelector('#question').innerHTML = 
+            `${textContent[index].question} <br>
+            <span>read more</span>`;
+            textContent[index].style ? (document.querySelector('#question').style = textContent[index].style) : ''
+        }
+        function toNext(num) {
+            textIndex += num
+            textIndex = (textIndex === 3) ? 0 : textIndex;
+            textIndex = (textIndex === -1) ? 2 : textIndex;
+            changeText(textIndex)
+        }
+
+    </script>
+    <script src="../js/util.js"></script>
+</body>
+
+</html>
