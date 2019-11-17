@@ -29,8 +29,11 @@
         <section>
             <div class="video">
                 <video class="video-content">
-                    <source src="../img/video/效果2.mov">
+                    <source src="../img/video/G+video.mov">
                 </video>
+                <div id="video-cover">
+                    <img src="../img/cover.jpeg">
+                </div>
                 <button class="play-btn" id="play"></button>
             </div>
         </section>
@@ -132,6 +135,7 @@
         let playBtn = document.querySelector('#play')
         playBtn.onclick = function() {
             if(video.paused){
+                document.querySelector('#video-cover').style.visibility = 'hidden'
                 video.play();
             }else{
                 video.pause();

@@ -19,6 +19,8 @@
     background-size: 100% auto;
     background-repeat: no-repeat;
     /* background-color: #bbb; */
+
+    position: relative;
 }
 .video-content {
     width: 894px;
@@ -26,6 +28,20 @@
     margin: 22px 0 0 202px;
     border-radius: 15px;
     background-color: black;
+}
+#video-cover {
+    position: absolute;
+    width: 894px;
+    height: 518px;
+    margin: 22px 0 0 202px;
+    border-radius: 15px;
+    background-color: black;
+    top: 0;
+}
+#video-cover > img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
 }
 .play-btn {
     width: 100px;
